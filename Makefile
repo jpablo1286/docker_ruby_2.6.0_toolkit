@@ -5,7 +5,7 @@ build: ## Builds docker image
 
 terminal: ## Opens a terminal for run ruby commands
 	make build
-	docker run -v `pwd`/src:/src -it docker_ruby_2.6.0_toolkit:1.0.0 /bin/bash
+	docker run --rm -v `pwd`/src:/src -it docker_ruby_2.6.0_toolkit:1.0.0 /bin/bash
 
 version: ## Displays ruby version in the container
 	make build
