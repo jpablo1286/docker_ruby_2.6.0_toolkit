@@ -5,7 +5,7 @@ ARG ssh_pub_key
 
 RUN apt-get update
 
-RUN apt-get install -y build-essential libtool automake pkg-config git wget gettext-base tar curl zlib1g-dev gnupg openssl cmake
+RUN apt-get install -y build-essential libtool automake pkg-config git wget gettext-base tar curl zlib1g-dev gnupg openssl cmake qt4-qmake qt4-dev-tools libqt4-dev qt4-default libqtwebkit4 libqtwebkit-dev
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
