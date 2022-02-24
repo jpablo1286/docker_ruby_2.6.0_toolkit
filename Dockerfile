@@ -1,4 +1,4 @@
-FROM ruby:2.6.0
+FROM ruby:2.3.7
 
 ARG ssh_prv_key
 ARG ssh_pub_key
@@ -11,7 +11,17 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 RUN apt-get install -y nodejs gcc g++ make
 
-RUN gem install rails -v 5.2.0
+RUN gem install racc -v 1.5.2
+
+RUN gem install nokogiri -v 1.6.8.1
+
+RUN gem install sprockets -v 3.7.2
+
+RUN gem install activesupport -v 5.2.6.2
+
+RUN gem install globalid -v 0.4.2
+
+RUN gem install rails -v 5.0.0
 
 RUN gem install bundler
 
